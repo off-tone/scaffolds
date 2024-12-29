@@ -1,0 +1,18 @@
+{
+  // 保存時に自動でフォーマットを実行する
+  "editor.formatOnSave": true,
+
+  // Prettier をデフォルトフォーマッターにする
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // ESLint のパッケージマネージャを pnpm に指定
+  "eslint.packageManager": "pnpm",
+
+  // ESLintがチェックするファイルの種類
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ]
+}

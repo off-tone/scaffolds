@@ -1,0 +1,43 @@
+{
+    "name": "@off-tone/eslint-config-base",
+    "type": "module",
+    "version": "0.0.0",
+    "description": "@off-tone/eslint-config-base",
+    "buildOptions": {
+      "ignore": true
+    },
+    "main": "./index.mjs",
+    "exports": {
+      ".": "./index.mjs",
+      "./shared": "./shared.mjs",
+      "./package.json": "./package.json"
+    },
+    "files": [
+      "shared.mjs",
+      "index.mjs"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/off-tone/scaffolds"
+    },
+    "keywords": [
+      "eslint",
+      "lint"
+    ],
+    "author": "nkenji09",
+    "license": "MIT",
+    "peerDependencies": {
+      "eslint": "^8.50.0",
+      "prettier": "^3.0.0"
+    },
+    "dependencies": {
+      "@typescript-eslint/eslint-plugin": "^7.16.1",
+      "@typescript-eslint/parser": "^7.16.1",
+      "eslint-config-airbnb-base": "^15.0.0",
+      "eslint-config-prettier": "^9.1.0",
+      "eslint-html-parser": "^6.8.2",
+      "eslint-plugin-import": "^2.29.1",
+      "eslint-plugin-prettier": "^5.2.1"
+    }
+  }
+  
