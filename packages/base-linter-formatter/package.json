@@ -1,0 +1,15 @@
+{
+	"name": "@off-tone/base-linter-formatter",
+	"version": "1.0.0",
+	"type": "module",
+	"description": "offtone社の基本となる linter, formatter の設定",
+	"main": "./biome.json",
+	"files": ["./biome.json"],
+	"scripts": {},
+	"keywords": [],
+	"author": "nkenji09",
+	"license": "MIT",
+	"peerDependencies": {
+		"@biomejs/biome": "^1.9.4"
+	}
+}
