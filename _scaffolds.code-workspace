@@ -1,32 +1,21 @@
 {
-  "folders": [
-    {
-      "name": "✨ scaffolds",
-      "path": "."
-    },
-    {
-      "name": "📦 eslint-config-base",
-      "path": "packages/eslint-config-base"
-    },
-    {
-      "name": "📦 prettier-config-base",
-      "path": "packages/prettier-config-base"
-    },
-    {
-      "name": "📟 eslint-config-express",
-      "path": "packages/eslint-config-express"
-    },
-    {
-      "name": "🖥️ eslint-config-react",
-      "path": "packages/eslint-config-react"
-    },
-    {
-      "name": "🖥️ stylelint-config-base",
-      "path": "packages/stylelint-config-base"
-    },
-    {
-      "name": "🖥️ stylelint-config-react",
-      "path": "packages/stylelint-config-react"
-    }
-  ]
+	"folders": [
+		{
+			"name": "✨ scaffolds",
+			"path": "."
+		},
+		{
+			"name": "📦 @off-tone/base-linter-formatter",
+			"path": "packages/base-linter-formatter"
+		},
+		{
+			"name": "🖥️ @off-tone/frontend-react-linter-formatter",
+			"path": "packages/frontend-react-linter-formatter"
+		},
+		{
+			"name": "📟 @off-tone/backend-linter-formatter",
+			"path": "packages/backend-linter-formatter"
+		}
+	],
+	"settings": {}
 }

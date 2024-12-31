@@ -15,8 +15,7 @@ biome.json
 ```json
 {
   "extends": ["@off-tone/base-linter-formatter"],
-  "rules": {
-    "jsx-quotes": ["error", "prefer-double"]
-  }
+  /** 参考: https://biomejs.dev/reference/configuration/ */
+  "overrides": []
 }
 ```
