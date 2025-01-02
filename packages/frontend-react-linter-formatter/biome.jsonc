@@ -1,0 +1,15 @@
+{
+  "extends": ["@off-tone/base-linter-formatter"],
+  "overrides": [
+    {
+      "linter": {
+        "rules": {
+          "suspicious": {
+            // React 環境なので off
+            "noReactSpecificProps": "off"
+          }
+        }
+      }
+    }
+  ]
+}

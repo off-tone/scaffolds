@@ -1,32 +1,41 @@
 {
-  "folders": [
-    {
-      "name": "✨ scaffolds",
-      "path": "."
-    },
-    {
-      "name": "📦 eslint-config-base",
-      "path": "packages/eslint-config-base"
-    },
-    {
-      "name": "📦 prettier-config-base",
-      "path": "packages/prettier-config-base"
-    },
-    {
-      "name": "📟 eslint-config-express",
-      "path": "packages/eslint-config-express"
-    },
-    {
-      "name": "🖥️ eslint-config-react",
-      "path": "packages/eslint-config-react"
-    },
-    {
-      "name": "🖥️ stylelint-config-base",
-      "path": "packages/stylelint-config-base"
-    },
-    {
-      "name": "🖥️ stylelint-config-react",
-      "path": "packages/stylelint-config-react"
-    }
-  ]
+	"folders": [
+		{
+			"name": "✨ scaffolds",
+			"path": "."
+		},
+		{
+			"name": "📦 @off-tone/base-linter-formatter",
+			"path": "packages/base-linter-formatter"
+		},
+		{
+			"name": "🖥️ @off-tone/frontend-react-linter-formatter",
+			"path": "packages/frontend-react-linter-formatter"
+		},
+		{
+			"name": "📟 @off-tone/backend-linter-formatter",
+			"path": "packages/backend-linter-formatter"
+		}
+	],
+	"settings": {
+		"files.exclude": {
+		  "**/.git": true,
+		  "**/.DS_Store": true,
+		  "**/dist": true,
+		  "**/node_modules": true,
+		  "**/.turbo": true,
+		  "**/.turbo-cache": true,
+		  "**/.storybook-static": true,
+		  "coverage": true
+		},
+	
+		// Search settings
+		"search.followSymlinks": false,
+		"search.maxResults": 5000,
+		"search.searchOnType": false,
+		"search.exclude": {
+		  "**/pnpm-lock.yaml": true,
+		  "**/*.code-search": true
+		},
+	}
 }

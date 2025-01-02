@@ -1,0 +1,25 @@
+{
+  "name": "@off-tone/base-linter-formatter",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "株式会社 offtone の基本となる linter, formatter の設定",
+  "main": "./biome.jsonc",
+  "files": ["./biome.jsonc"],
+  "exports": {
+    ".": "./biome.jsonc"
+  },
+  "bin": {
+    "biome": "./node_modules/@biomejs/biome/bin/biome"
+  },
+  "scripts": {
+    "clean": "rm -fr ./node_modules",
+    "format": "biome check --write .",
+    "lint": "biome check ."
+  },
+  "keywords": [],
+  "author": "nkenji09",
+  "license": "MIT",
+  "dependencies": {
+    "@biomejs/biome": "1.9.4"
+  }
+}

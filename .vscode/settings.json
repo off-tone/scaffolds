@@ -1,18 +1,37 @@
 {
+  // biome の bin ファイルのパスを指定する
+  "biome.lspBin": "./node_modules/.bin/biome",
+
   // 保存時に自動でフォーマットを実行する
   "editor.formatOnSave": true,
+  // Biome をデフォルトフォーマッターにする
+  "editor.defaultFormatter": "biomejs.biome",
 
-  // Prettier をデフォルトフォーマッターにする
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-
-  // ESLint のパッケージマネージャを pnpm に指定
-  "eslint.packageManager": "pnpm",
-
-  // ESLintがチェックするファイルの種類
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ]
+  // デフォルトフォーマッターだけを指定すると、保存時のフォーマットに
+  // タイムラグがあるので各言語ごとに明示的に指定する
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "editor.codeActionsOnSave": {
+    "quickfix.biome": "explicit",
+    "source.organizeImports.biome": "explicit"
+  }
 }

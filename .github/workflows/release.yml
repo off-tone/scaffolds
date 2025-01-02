@@ -1,0 +1,53 @@
+name: Release
+
+on:
+  push:
+    paths:
+      - ".github/composite-actions/**"
+      - ".github/workflows/release.yml"
+      - ".changeset/**"
+      - "packages/**"
+      - "examples/**"
+      - "package.json"
+      - "pnpm-lock.yaml"
+    branches:
+      - main
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  release:
+    name: Release
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install
+        uses: ./.github/composite-actions/install
+        with:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create Release Pull Request or Publish to npm
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          # Changesetsの標準コマンドの代わりに、ルートプロジェクトのpackage.jsonにあるnpm-scriptsを実行する
+          version: pnpm ci:version
+          publish: pnpm ci:publish
+          # PRのタイトルを指定する
+          commit: "ci(changesets): version packages"
+          # カスタム名を不要したい時に指定する
+          # setupGitUser: false
+          # GitHubリリースを作成しない（オプション）
+          createGithubReleases: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build Packages
+        run: pnpm build

@@ -1,0 +1,25 @@
+{
+  "name": "@off-tone/backend-linter-formatter",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "株式会社 offtone の Nodeバックエンド環境の基礎となる linter, formatter の設定",
+  "main": "./biome.jsonc",
+  "files": ["./biome.jsonc"],
+  "exports": {
+    ".": "./biome.jsonc"
+  },
+  "scripts": {
+    "clean": "rm -fr ./node_modules",
+    "format": "biome check --write .",
+    "lint": "biome check ."
+  },
+  "keywords": [],
+  "author": "nkenji09",
+  "license": "MIT",
+  "peerDependencies": {
+    "@off-tone/base-linter-formatter": "workspace:*"
+  },
+  "dependencies": {
+    "@off-tone/base-linter-formatter": "workspace:*"
+  }
+}

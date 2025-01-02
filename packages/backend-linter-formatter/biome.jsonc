@@ -1,0 +1,12 @@
+{
+  "extends": ["@off-tone/base-linter-formatter"],
+  "overrides": [
+    {
+      "linter": {
+        "rules": {
+          "suspicious": {}
+        }
+      }
+    }
+  ]
+}
