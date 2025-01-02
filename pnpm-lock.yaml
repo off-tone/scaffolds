@@ -8,9 +8,6 @@ importers:
 
   .:
     devDependencies:
-      '@biomejs/biome':
-        specifier: ^1.9.4
-        version: 1.9.4
       '@changesets/changelog-github':
         specifier: ^0.5.0
         version: 0.5.0
@@ -23,9 +20,6 @@ importers:
 
   packages/backend-linter-formatter:
     dependencies:
-      '@biomejs/biome':
-        specifier: ^1.9.4
-        version: 1.9.4
       '@off-tone/base-linter-formatter':
         specifier: workspace:*
         version: link:../base-linter-formatter
@@ -33,14 +27,11 @@ importers:
   packages/base-linter-formatter:
     dependencies:
       '@biomejs/biome':
-        specifier: ^1.9.4
+        specifier: 1.9.4
         version: 1.9.4
 
   packages/frontend-react-linter-formatter:
     dependencies:
-      '@biomejs/biome':
-        specifier: ^1.9.4
-        version: 1.9.4
       '@off-tone/base-linter-formatter':
         specifier: workspace:*
         version: link:../base-linter-formatter

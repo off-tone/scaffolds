@@ -8,14 +8,18 @@
   "exports": {
     ".": "./biome.jsonc"
   },
+  "bin": {
+    "biome": "./node_modules/@biomejs/biome/bin/biome"
+  },
   "scripts": {
+    "clean": "rm -fr ./node_modules",
     "format": "biome check --write .",
     "ci:lint": "biome check ."
   },
   "keywords": [],
   "author": "nkenji09",
   "license": "MIT",
-  "peerDependencies": {
-    "@biomejs/biome": "^1.9.4"
+  "dependencies": {
+    "@biomejs/biome": "1.9.4"
   }
 }

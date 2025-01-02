@@ -9,14 +9,17 @@
     ".": "./biome.jsonc"
   },
   "scripts": {
+    "clean": "rm -fr ./node_modules",
     "format": "biome check --write .",
     "ci:lint": "biome check ."
   },
   "keywords": [],
   "author": "nkenji09",
   "license": "MIT",
+  "peerDependencies": {
+    "@off-tone/base-linter-formatter": "workspace:*"
+  },
   "dependencies": {
-    "@biomejs/biome": "^1.9.4",
     "@off-tone/base-linter-formatter": "workspace:*"
   }
 }
