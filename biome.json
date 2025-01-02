@@ -1,4 +1,4 @@
 {
-	"extends": ["@off-tone/base-linter-formatter"],
-	"overrides": []
+  "extends": ["@off-tone/base-linter-formatter"],
+  "overrides": []
 }

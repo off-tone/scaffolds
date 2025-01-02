@@ -17,5 +17,25 @@
 			"path": "packages/backend-linter-formatter"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"files.exclude": {
+		  "**/.git": true,
+		  "**/.DS_Store": true,
+		  "**/dist": true,
+		  "**/node_modules": true,
+		  "**/.turbo": true,
+		  "**/.turbo-cache": true,
+		  "**/.storybook-static": true,
+		  "coverage": true
+		},
+	
+		// Search settings
+		"search.followSymlinks": false,
+		"search.maxResults": 5000,
+		"search.searchOnType": false,
+		"search.exclude": {
+		  "**/pnpm-lock.yaml": true,
+		  "**/*.code-search": true
+		},
+	}
 }

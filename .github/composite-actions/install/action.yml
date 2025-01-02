@@ -1,0 +1,41 @@
+name: "Install"
+description: "Sets up Node.js and runs install"
+inputs:
+  # 社内パッケージインストールのために secrets.GITHUB_TOKEN を設定する
+  NODE_AUTH_TOKEN:
+    default: ''
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version-file: ".node-version"
+        registry-url: 'https://npm.pkg.github.com'
+        scope: '@off-tone'
+        cache: "pnpm"
+
+    - name: Install dependencies
+      shell: bash
+      # 社内パッケージのインストールのためにGITHUB_TOKENを.npmrcに追記してからインストールする
+      run: |
+        echo "//npm.pkg.github.com/:_authToken=$NODE_AUTH_TOKEN" >> .npmrc
+        pnpm install
+      env:
+        NODE_AUTH_TOKEN: ${{ inputs.NODE_AUTH_TOKEN }}
+        PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: "1"
+
+    - name: Turbo Cache
+      id: turbo-cache
+      uses: actions/cache@v4
+      with:
+        path: .turbo-cache
+        key: turbo-${{ github.job }}-${{ github.ref_name }}-${{ github.sha }}
+        # turborepo cache will be persistent (7 days & 10GB limit)
+        restore-keys: |
+          turbo-
