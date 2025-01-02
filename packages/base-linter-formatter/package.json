@@ -9,7 +9,7 @@
     ".": "./biome.jsonc"
   },
   "bin": {
-    "biome": "./node_modules/@biomejs/biome/bin/biome"
+    "biome": "./node_modules/.bin/biome"
   },
   "scripts": {
     "changeset": "cd ../.. && changeset",

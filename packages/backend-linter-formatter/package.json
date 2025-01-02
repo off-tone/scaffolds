@@ -21,6 +21,6 @@
     "@off-tone/base-linter-formatter": "^1.0.0"
   },
   "dependencies": {
-    "@off-tone/base-linter-formatter": "^1.0.0"
+    "@off-tone/base-linter-formatter": "workspace:*"
   }
 }
