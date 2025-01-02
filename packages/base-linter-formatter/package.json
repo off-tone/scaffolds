@@ -12,6 +12,7 @@
     "biome": "./node_modules/@biomejs/biome/bin/biome"
   },
   "scripts": {
+    "changeset": "cd ../.. && changeset",
     "clean": "rm -fr ./node_modules",
     "format": "biome check --write .",
     "lint": "biome check ."
