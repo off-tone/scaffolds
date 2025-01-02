@@ -24,8 +24,8 @@ importers:
   packages/backend-linter-formatter:
     dependencies:
       '@off-tone/base-linter-formatter':
-        specifier: workspace:*
-        version: link:../base-linter-formatter
+        specifier: ^1.0.0
+        version: 1.0.0
 
   packages/base-linter-formatter:
     dependencies:
@@ -36,8 +36,8 @@ importers:
   packages/frontend-react-linter-formatter:
     dependencies:
       '@off-tone/base-linter-formatter':
-        specifier: workspace:*
-        version: link:../base-linter-formatter
+        specifier: ^1.0.0
+        version: 1.0.0
 
 packages:
 
@@ -176,6 +176,10 @@ packages:
   '@nodelib/fs.walk@1.2.8':
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
+
+  '@off-tone/base-linter-formatter@1.0.0':
+    resolution: {integrity: sha512-W8lYYyBA6atZjPeyKsbee4tQNzNDBHRewf0a1R9+XW59Qr2fhr3Ei5G4h8mwgs27EVj7zCw1+6IbzKotJUPVjA==, tarball: https://npm.pkg.github.com/download/@off-tone/base-linter-formatter/1.0.0/9df29d9d96e8dcd1d6dfd3b396b8a83d2335ab56}
+    hasBin: true
 
   '@types/node@12.20.55':
     resolution: {integrity: sha512-J8xLz7q2OFulZ2cyGTLE1TbbZcjpno7FaN6zdJNrgAdrJ+DZzh/uFR6YrTb4C+nXakvud8Q4+rbhoIWlYQbUFQ==}
@@ -754,6 +758,10 @@ snapshots:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.18.0
+
+  '@off-tone/base-linter-formatter@1.0.0':
+    dependencies:
+      '@biomejs/biome': 1.9.4
 
   '@types/node@12.20.55': {}
 

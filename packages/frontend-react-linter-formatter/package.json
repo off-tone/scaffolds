@@ -9,6 +9,7 @@
     ".": "./biome.jsonc"
   },
   "scripts": {
+    "changeset": "cd ../.. && changeset",
     "clean": "rm -fr ./node_modules",
     "format": "biome check --write .",
     "lint": "biome check ."
@@ -17,9 +18,9 @@
   "author": "nkenji09",
   "license": "MIT",
   "peerDependencies": {
-    "@off-tone/base-linter-formatter": "workspace:*"
+    "@off-tone/base-linter-formatter": "^1.0.0"
   },
   "dependencies": {
-    "@off-tone/base-linter-formatter": "workspace:*"
+    "@off-tone/base-linter-formatter": "^1.0.0"
   }
 }
