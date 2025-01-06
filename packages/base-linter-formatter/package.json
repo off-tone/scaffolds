@@ -4,14 +4,9 @@
   "type": "module",
   "description": "株式会社 offtone の基本となる linter, formatter の設定",
   "main": "./biome.jsonc",
-  "files": [
-    "./biome.jsonc"
-  ],
+  "files": ["./biome.jsonc"],
   "exports": {
     ".": "./biome.jsonc"
-  },
-  "bin": {
-    "biome": "./node_modules/.bin/biome"
   },
   "scripts": {
     "changeset": "cd ../.. && changeset",
@@ -22,7 +17,7 @@
   "keywords": [],
   "author": "nkenji09",
   "license": "MIT",
-  "dependencies": {
+  "peerDependencies": {
     "@biomejs/biome": "1.9.4"
   }
 }
