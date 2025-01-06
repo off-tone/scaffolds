@@ -1,5 +1,11 @@
 # @off-tone/base-linter-formatter
 
+## 1.0.2
+
+### Patch Changes
+
+- [#9](https://github.com/off-tone/scaffolds/pull/9) [`edd61cb`](https://github.com/off-tone/scaffolds/commit/edd61cb8e79df4351950dd84ca703e294557bbd1) Thanks [@nkenji09](https://github.com/nkenji09)! - peerDependency に biome を追加
+
 ## 1.0.1
 
 ### Patch Changes

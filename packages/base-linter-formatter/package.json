@@ -1,10 +1,12 @@
 {
   "name": "@off-tone/base-linter-formatter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "description": "株式会社 offtone の基本となる linter, formatter の設定",
   "main": "./biome.jsonc",
-  "files": ["./biome.jsonc"],
+  "files": [
+    "./biome.jsonc"
+  ],
   "exports": {
     ".": "./biome.jsonc"
   },
