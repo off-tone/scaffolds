@@ -9,7 +9,7 @@
     "lint": "biome check . && turbo lint",
     "test": "turbo test",
     "ci:validate": "pnpm lint && pnpm build && pnpm test",
-    "ci:version": "changeset version",
+    "ci:version": "changeset version && pnpm format",
     "ci:publish": "pnpm build && changeset publish"
   },
   "devDependencies": {
