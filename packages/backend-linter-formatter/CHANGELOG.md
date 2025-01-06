@@ -1,5 +1,14 @@
 # @off-tone/backend-linter-formatter
 
+## 1.0.4
+
+### Patch Changes
+
+- [#11](https://github.com/off-tone/scaffolds/pull/11) [`2f8ec06`](https://github.com/off-tone/scaffolds/commit/2f8ec0629c3e8732572c851cf3b2fa60e96039a4) Thanks [@nkenji09](https://github.com/nkenji09)! - Changeset の挙動確認
+
+- Updated dependencies [[`2f8ec06`](https://github.com/off-tone/scaffolds/commit/2f8ec0629c3e8732572c851cf3b2fa60e96039a4)]:
+  - @off-tone/base-linter-formatter@1.0.3
+
 ## 1.0.3
 
 ### Patch Changes
