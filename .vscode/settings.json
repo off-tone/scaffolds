@@ -1,6 +1,8 @@
 {
-  // biome の bin ファイルのパスを指定する
-  "biome.lspBin": "./node_modules/.bin/biome",
+  // package.json のスキーマ情報を更新する
+  "json.schemaDownload.enable": true,
+  // パッケージ側の lockfile がない場合に勝手に生成されるのを防ぐ
+  "npm.autoDetect": "off",
 
   // 保存時に自動でフォーマットを実行する
   "editor.formatOnSave": true,
