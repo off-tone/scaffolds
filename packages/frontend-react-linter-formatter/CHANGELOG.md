@@ -1,5 +1,11 @@
 # @off-tone/frontend-react-linter-formatter
 
+## 1.0.6
+
+### Patch Changes
+
+- [#15](https://github.com/off-tone/scaffolds/pull/15) [`bd56eff`](https://github.com/off-tone/scaffolds/commit/bd56eff04c85169cf2ac4bf3f56a51406fe07c58) Thanks [@nkenji09](https://github.com/nkenji09)! - build(biome): React 用の biome 設定
+
 ## 1.0.5
 
 ### Patch Changes
