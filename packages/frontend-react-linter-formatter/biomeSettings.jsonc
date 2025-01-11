@@ -1,19 +1,173 @@
 {
-  "extends": ["@off-tone/base-linter-formatter"],
-  "overrides": [
-    {
-      "include": ["src/**/*.tsx", "src/**/*.ts", "src/**/*.jsx", "src/**/*.js"],
-      "linter": {
-        "rules": {
-          "suspicious": {
-            // React 環境なので off
-            "noReactSpecificProps": "off"
-          }
-        }
+  // 参考: https://biomejs.dev/reference/configuration/
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "files": {
+    // biome がチェック可能なファイルの最大サイズ（1MB程度）
+    "maxSize": 1048576,
+    // biome がチェックする対象ファイル
+    "include": [
+      "**/*.js",
+      "**/*.jsx",
+      "**/*.cjs",
+      "**/*.mjs",
+      "**/*.ts",
+      "**/*.tsx",
+      "**/*.json",
+      "**/*.jsonc",
+      "**/*.css"
+    ],
+    // biome がチェックしないファイル（includeよりも優先される）
+    "ignore": ["node_modules", "dist", "build", ".next", ".nuxt", "public"],
+    // biome がファイル種別を判別できないとき、サポート外の時に無視する
+    "ignoreUnknown": true
+  },
+  "vcs": {
+    "enabled": true,
+    // バージョン管理システムの種類
+    "clientKind": "git",
+    // Git のメインブランチ（Biome が変更の有無をこのブランチと比較する）
+    "defaultBranch": "main",
+    // .gitignore に指定されたファイルを Biome のチェック対象外とする
+    "useIgnoreFile": true
+  },
+  "linter": {
+    "enabled": true,
+    // Lint 対象ファイル
+    "include": [
+      "**/*.js",
+      "**/*.jsx",
+      "**/*.cjs",
+      "**/*.mjs",
+      "**/*.ts",
+      "**/*.tsx",
+      "**/*.json",
+      "**/*.jsonc",
+      "**/*.css"
+    ],
+    // Lint 対象外ファイル（includeよりも優先される）
+    "ignore": ["node_modules", "dist", "build", ".next", ".nuxt", "public"],
+    // Lint ルール
+    "rules": {
+      // 全てのグループの設定を全て有効化（無効化したいところだけを追加していく）
+      "all": true,
+      "suspicious": {
+        // any 型を使うことはあるが、避けてほしいので警告
+        "noExplicitAny": "warn",
+        // React 環境なので off
+        "noReactSpecificProps": "off"
       },
-      "javascript": {
-        "globals": ["React"]
+      "style": {
+        // default export を使いたいので off
+        "noDefaultExport": "off",
+        // ファイル名の命名規則は任意
+        "useFilenamingConvention": "off"
       }
     }
-  ]
+  },
+  "formatter": {
+    "enabled": true,
+    // Format 対象ファイル
+    "include": [
+      "**/*.js",
+      "**/*.jsx",
+      "**/*.cjs",
+      "**/*.mjs",
+      "**/*.ts",
+      "**/*.tsx",
+      "**/*.json",
+      "**/*.jsonc",
+      "**/*.css"
+    ],
+    // Format 対象外ファイル（includeよりも優先される）
+    "ignore": ["node_modules", "dist", "build", ".next", ".nuxt", "public"],
+    // シンタックスエラーがある文書もフォーマットする
+    "formatWithErrors": true,
+    // インデントにはスペースを利用
+    "indentStyle": "space",
+    // インデントサイズ
+    "indentWidth": 2,
+    // 改行コード
+    "lineEnding": "lf",
+    // 1行の文字数
+    "lineWidth": 120,
+    // HTML の属性を複数行にするかどうかは自動選択
+    "attributePosition": "auto",
+    // .editorconfig を使用しない
+    "useEditorconfig": false
+  },
+  "organizeImports": {
+    "enabled": true,
+    // Sort 対象ファイル
+    "include": ["**/*.js", "**/*.jsx", "**/*.cjs", "**/*.mjs", "**/*.ts", "**/*.tsx", "**/*.css"],
+    // Sort 対象外ファイル（includeよりも優先される）
+    "ignore": ["node_modules", "dist", "build", ".next", ".nuxt", "public"]
+  },
+  "javascript": {
+    "parser": {
+      // 安全でない/実験的なパラメータ・デコレータをサポートできるようにする
+      "unsafeParameterDecoratorsEnabled": true
+    },
+    "formatter": {
+      "enabled": true,
+      // シングルクォーテーションに固定
+      "quoteStyle": "single",
+      // シングルクォーテーションに固定
+      "jsxQuoteStyle": "single",
+      // オブジェクト内部のプロパティを引用符で囲かどうかは「必要なときのみ」
+      "quoteProperties": "asNeeded",
+      // 末尾のコンマは基本的に常につける
+      "trailingCommas": "all",
+      // セミコロンは基本的に常につける
+      "semicolons": "always",
+      // アロー関数の引数の括弧は常に必要
+      "arrowParentheses": "always",
+      // 複数行のJSX要素の終了タグ「>」 を 最後の属性行にしない（改行する）
+      "bracketSameLine": false,
+      // 括弧と内部値の間にスペースを追加する
+      "bracketSpacing": true,
+      // jsx 要素の属性位置を複数行にするかどうかは自動判断
+      "attributePosition": "auto"
+    },
+    // Biomeが無視すべきグローバル名のリスト（アナライザー、リンターなど）
+    "globals": ["_", "React"],
+    // JSXを解釈するために使用されるランタイムは、Biome による特別な処理を必要としない、モダンまたはネイティブな JSX 環境であること
+    "jsxRuntime": "transparent"
+  },
+  "json": {
+    "parser": {
+      // 解釈時にはコメントを許容
+      "allowComments": true,
+      // 解釈時には末尾のコンマを許容
+      "allowTrailingCommas": true
+    },
+    "formatter": {
+      "enabled": true,
+      // インデントにはスペースを利用
+      "indentStyle": "space",
+      // インデント幅
+      "indentWidth": 2,
+      // 改行コード
+      "lineEnding": "lf",
+      // 1行の長さ
+      "lineWidth": 120,
+      // 末尾のコンマは削除
+      "trailingCommas": "none"
+    },
+    "linter": {
+      "enabled": true
+    }
+  },
+  "css": {
+    "parser": {
+      // CSS Module を解釈できるようにする
+      "cssModules": true
+    },
+    "formatter": {
+      "enabled": true,
+      "quoteStyle": "single"
+    },
+    "linter": {
+      "enabled": true
+    }
+  }
 }
