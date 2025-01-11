@@ -4,38 +4,40 @@
 			"name": "✨ scaffolds",
 			"path": "."
 		},
-		{
-			"name": "📦 @off-tone/base-linter-formatter",
-			"path": "packages/base-linter-formatter"
-		},
-		{
-			"name": "🖥️ @off-tone/frontend-react-linter-formatter",
-			"path": "packages/frontend-react-linter-formatter"
-		},
-		{
-			"name": "📟 @off-tone/backend-linter-formatter",
-			"path": "packages/backend-linter-formatter"
-		}
+		// biome が複数ルートにすると動作しないのでコメントアウト
+
+		// {
+		// 	"name": "⚙️ @off-tone/base-linter-formatter",
+		// 	"path": "packages/base-linter-formatter"
+		// },
+		// {
+		// 	"name": "⚙️ @off-tone/frontend-react-linter-formatter",
+		// 	"path": "packages/frontend-react-linter-formatter"
+		// },
+		// {
+		// 	"name": "⚙️ @off-tone/backend-linter-formatter",
+		// 	"path": "packages/backend-linter-formatter"
+		// }
 	],
 	"settings": {
 		"files.exclude": {
-		  "**/.git": true,
-		  "**/.DS_Store": true,
-		  "**/dist": true,
-		  "**/node_modules": true,
-		  "**/.turbo": true,
-		  "**/.turbo-cache": true,
-		  "**/.storybook-static": true,
-		  "coverage": true
+			"**/.git": true,
+			"**/.DS_Store": true,
+			"**/dist": true,
+			"**/node_modules": true,
+			"**/.turbo": true,
+			"**/.turbo-cache": true,
+			"**/.storybook-static": true,
+			"coverage": true
 		},
-	
+
 		// Search settings
 		"search.followSymlinks": false,
 		"search.maxResults": 5000,
 		"search.searchOnType": false,
 		"search.exclude": {
-		  "**/pnpm-lock.yaml": true,
-		  "**/*.code-search": true
+			"**/pnpm-lock.yaml": true,
+			"**/*.code-search": true
 		},
 	}
 }

@@ -5,9 +5,19 @@
     // biome がチェック可能なファイルの最大サイズ（1MB程度）
     "maxSize": 1048576,
     // biome がチェックする対象ファイル
-    "include": ["**/*.js", "**/*.jsx", "**/*.cjs", "**/*.mjs", "**/*.ts", "**/*.tsx", "**/*.json", "**/*.css"],
+    "include": [
+      "**/*.js",
+      "**/*.jsx",
+      "**/*.cjs",
+      "**/*.mjs",
+      "**/*.ts",
+      "**/*.tsx",
+      "**/*.json",
+      "**/*.jsonc",
+      "**/*.css"
+    ],
     // biome がチェックしないファイル（includeよりも優先される）
-    "ignore": ["node_modules", "dist", "build"],
+    "ignore": ["node_modules", "dist", "build", ".next", ".nuxt", "public"],
     // biome がファイル種別を判別できないとき、サポート外の時に無視する
     "ignoreUnknown": true
   },
@@ -23,9 +33,19 @@
   "linter": {
     "enabled": true,
     // Lint 対象ファイル
-    "include": ["**/*.js", "**/*.jsx", "**/*.cjs", "**/*.mjs", "**/*.ts", "**/*.tsx", "**/*.json", "**/*.css"],
+    "include": [
+      "**/*.js",
+      "**/*.jsx",
+      "**/*.cjs",
+      "**/*.mjs",
+      "**/*.ts",
+      "**/*.tsx",
+      "**/*.json",
+      "**/*.jsonc",
+      "**/*.css"
+    ],
     // Lint 対象外ファイル（includeよりも優先される）
-    "ignore": ["node_modules", "dist", "build"],
+    "ignore": ["node_modules", "dist", "build", ".next", ".nuxt", "public"],
     // Lint ルール
     "rules": {
       // 全てのグループの設定を全て有効化（無効化したいところだけを追加していく）
@@ -45,9 +65,19 @@
   "formatter": {
     "enabled": true,
     // Format 対象ファイル
-    "include": ["**/*.js", "**/*.jsx", "**/*.cjs", "**/*.mjs", "**/*.ts", "**/*.tsx", "**/*.json", "**/*.css"],
+    "include": [
+      "**/*.js",
+      "**/*.jsx",
+      "**/*.cjs",
+      "**/*.mjs",
+      "**/*.ts",
+      "**/*.tsx",
+      "**/*.json",
+      "**/*.jsonc",
+      "**/*.css"
+    ],
     // Format 対象外ファイル（includeよりも優先される）
-    "ignore": ["node_modules", "dist", "build"],
+    "ignore": ["node_modules", "dist", "build", ".next", ".nuxt", "public"],
     // シンタックスエラーがある文書もフォーマットする
     "formatWithErrors": true,
     // インデントにはスペースを利用
@@ -68,7 +98,7 @@
     // Sort 対象ファイル
     "include": ["**/*.js", "**/*.jsx", "**/*.cjs", "**/*.mjs", "**/*.ts", "**/*.tsx", "**/*.css"],
     // Sort 対象外ファイル（includeよりも優先される）
-    "ignore": ["node_modules", "dist", "build"]
+    "ignore": ["node_modules", "dist", "build", ".next", ".nuxt", "public"]
   },
   "javascript": {
     "parser": {
@@ -91,8 +121,8 @@
       "arrowParentheses": "always",
       // 複数行のJSX要素の終了タグ「>」 を 最後の属性行にしない（改行する）
       "bracketSameLine": false,
-      // 括弧と内部値の間にスペースを追加しない
-      "bracketSpacing": false,
+      // 括弧と内部値の間にスペースを追加する
+      "bracketSpacing": true,
       // jsx 要素の属性位置を複数行にするかどうかは自動判断
       "attributePosition": "auto"
     },
