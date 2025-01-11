@@ -1,5 +1,5 @@
 {
-  "name": "off-tone/scaffolds",
+  "name": "@off-tone/scaffolds",
   "type": "module",
   "scripts": {
     "clean": "rm -fr ./node_modules; pnpm -r run clean",

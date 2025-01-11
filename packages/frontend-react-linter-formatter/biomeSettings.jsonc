@@ -2,6 +2,7 @@
   "extends": ["@off-tone/base-linter-formatter"],
   "overrides": [
     {
+      "include": ["src/**/*.tsx", "src/**/*.ts", "src/**/*.jsx", "src/**/*.js"],
       "linter": {
         "rules": {
           "suspicious": {
@@ -9,6 +10,9 @@
             "noReactSpecificProps": "off"
           }
         }
+      },
+      "javascript": {
+        "globals": ["React"]
       }
     }
   ]

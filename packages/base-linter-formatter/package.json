@@ -3,10 +3,10 @@
   "version": "1.0.3",
   "type": "module",
   "description": "株式会社 offtone の基本となる linter, formatter の設定",
-  "main": "./biome.jsonc",
-  "files": ["./biome.jsonc"],
+  "main": "./biomeSettings.jsonc",
+  "files": ["./biomeSettings.jsonc"],
   "exports": {
-    ".": "./biome.jsonc"
+    ".": "./biomeSettings.jsonc"
   },
   "scripts": {
     "changeset": "cd ../.. && changeset",
