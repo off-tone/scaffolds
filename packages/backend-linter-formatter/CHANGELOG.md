@@ -1,5 +1,14 @@
 # @off-tone/backend-linter-formatter
 
+## 1.0.5
+
+### Patch Changes
+
+- [#13](https://github.com/off-tone/scaffolds/pull/13) [`bf6dde1`](https://github.com/off-tone/scaffolds/commit/bf6dde179b30a3cbc9dfb1fbfb943d13436db769) Thanks [@nkenji09](https://github.com/nkenji09)! - React 特有の lint ルールの追加など
+
+- Updated dependencies [[`bf6dde1`](https://github.com/off-tone/scaffolds/commit/bf6dde179b30a3cbc9dfb1fbfb943d13436db769)]:
+  - @off-tone/base-linter-formatter@1.0.4
+
 ## 1.0.4
 
 ### Patch Changes
